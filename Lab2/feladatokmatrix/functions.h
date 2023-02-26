@@ -11,3 +11,8 @@
 #include "constants.h"
 void allocateMemoryForMatrix2(int rows, int cols, int ***dpMatrix);
 void readMatrix(int *pRows, int *pCols, int ***dpArray, const char *input);
+int maximumValueOfColumn(int rows, int columnIndex, int **pMatrix);
+int* columnMaximums(int rows, int cols, int **pMatrix);
+int maximumValueOfMatrix(int rows, int cols, int **pMatrix);
+int sumOfMatrixElements(int rows, int cols, int **pMatrix);
+
