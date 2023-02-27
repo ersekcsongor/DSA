@@ -26,9 +26,12 @@ void readMatrix(int *pRows, int *pCols, int ***dpArray, const char *input){
     allocateMemoryForMatrix2(*pRows,*pCols,dpArray);
     for (int i = 0; i < *pRows; ++i) {
         for (int j = 0; j < *pCols; ++j) {
-            scanf("%i",&(*dpArray)[i][j]);
+            fscanf(input,"%i",&(*dpArray)[i][j]);
         }
+
     }
+
+
 }
 int maximumValueOfColumn(int rows, int columnIndex, int **pMatrix)
 {
@@ -76,4 +79,24 @@ int sumOfMatrixElements(int rows, int cols, int **pMatrix){
         }
     }
     return sum;
+}
+
+void writeMatrix(int rows,int cols,int **dpMatrix,const char *input){
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            printf("%i ",dpMatrix[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void negpoz(int rows,int cols,int **dpMatrix) {
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            if(dpMatrix[i][j] < 0 )
+            {
+                dpMatrix[i][j] = abs(dpMatrix[i][j]);
+            }
+        }
+    }
 }

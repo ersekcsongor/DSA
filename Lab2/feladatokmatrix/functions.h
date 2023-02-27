@@ -15,4 +15,5 @@ int maximumValueOfColumn(int rows, int columnIndex, int **pMatrix);
 int* columnMaximums(int rows, int cols, int **pMatrix);
 int maximumValueOfMatrix(int rows, int cols, int **pMatrix);
 int sumOfMatrixElements(int rows, int cols, int **pMatrix);
-
+void writeMatrix(int rows,int cols,int **dpMatrix,const char *input);
+void negpoz(int rows,int cols,int **dpMatrix);
