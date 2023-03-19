@@ -21,6 +21,7 @@ typedef struct {
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
+#include <ctype.h>
 void createStack(int capacity, Stack *stack);
 void destroyStack(Stack* stack);
 bool isEmpty(Stack stack);

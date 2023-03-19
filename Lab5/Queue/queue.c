@@ -10,13 +10,19 @@ bool isFull(Queue queue) {
 }
 
 bool isEmpty(Queue queue) {
-    return queue.front == -1;
+    return queue.front == -1 && queue.rear == -1;
 }
 
 void createQueue(int capacity, Queue *queue) {
     queue->capacity = capacity;
     queue->front = queue->rear = -1;
-    queue->elements = (int *) calloc(queue->capacity,sizeof(int));
+    for (int i = 0; i < queue->capacity; ++i) {
+    queue->elements[i] = (char *) calloc(CAR_PLATE_NUMBER_LIMIT,sizeof(char));
+    if(!queue->elements[i]){
+        printf(MEMORY_ALLOCATION_ERROR_MESSAGE);
+        exit(MEMORY_ALLOCATION_ERROR_CODE);
+        }
+    }
 }
 
 void destroyQueue(Queue *queue) {
@@ -26,39 +32,45 @@ void destroyQueue(Queue *queue) {
     queue = NULL;
 }
 
-void enqueue(Queue *queue, int item) {
+void enqueue(Queue *queue, char *item) {
     if (isFull(*queue)) {
         printf(FULL_MESSAGE);
         return;
     }
-    if (isEmpty(*queue)) {
-        queue->front = 0;
+    if(queue->front == -1)
+    {
+        queue->front = queue->rear = 0;
     }
-    queue->elements[++queue->rear]=item);
+    else
+    {
+        queue->rear++;
+    }
+    strcpy(queue->elements[queue->rear],item);
 }
 
-int dequeue(Queue *queue) {
-    if (isEmpty(*queue)) {
+char* dequeue(Queue *queue) {
+    if(isEmpty(*queue))
+    {
         printf(EMPTY_MESSAGE);
-        return NULL;
+        return EMPTY_MESSAGE;
     }
-    int pos = queue->front;
-    if (queue->front == queue->rear) {
+    //ha csak egy elem van
+    if(queue->front == queue->rear)
+    {
+        int poz = queue->front;
         queue->front = queue->rear = -1;
-    } else {
-        queue->front++;
+        return queue->elements[poz];
     }
-    return queue->elements[pos];
+    return queue->elements[queue->front++];
 }
 
 void display(Queue queue) {
     if (isEmpty(queue)) {
-        printf("The queue is ");
         printf(EMPTY_MESSAGE);
         return;
     }
     for (int i = queue.front; i <= queue.rear; ++i) {
-        printf("%i\n"
-                , queue.elements[i]);
+        printf("\t-3%s\n" , queue.elements[i]);
     }
+    printf("\n");
 }
