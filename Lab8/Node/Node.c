@@ -160,3 +160,8 @@ void freeList(Node **head){
     }
     *head = NULL;
 }
+
+void insert(Node **head_ref,int data)
+{
+
+}

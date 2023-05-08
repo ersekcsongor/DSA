@@ -1,0 +1,10 @@
+# ninja log v5
+4	345	6997931900204754	CMakeFiles/Students2.dir/main.c.obj	68196b85f2d32497
+20	387	6997931900664809	CMakeFiles/Students2.dir/student.c.obj	6af25f9de15db93e
+387	889	6997931905592884	Students2.exe	2c4d67865d31ce42
+12	153	7004006476780983	CMakeFiles/Students2.dir/D_/Github_DSA/DSA/Lab5/Stack/functions.c.obj	7462895372645bff
+35	470	7005723339838049	CMakeFiles/Students2.dir/D_/Github_DSA/DSA/Lab5/Queue/main.c.obj	e52925e82d6a89fa
+3	472	7005723339838049	CMakeFiles/Students2.dir/D_/Github_DSA/DSA/Lab5/Stack/main.c.obj	cb4e8ec46457e6d3
+15	475	7005723339838049	CMakeFiles/Students2.dir/D_/Github_DSA/DSA/Lab5/Stack/functions.c.obj	7462895372645bff
+4	137	7005728141532466	CMakeFiles/Students2.dir/D_/Github_DSA/DSA/Lab5/Queue/main.c.obj	e52925e82d6a89fa
+14	145	7005728141607585	CMakeFiles/Students2.dir/D_/Github_DSA/DSA/Lab5/Queue/queue.c.obj	16611909f7618922

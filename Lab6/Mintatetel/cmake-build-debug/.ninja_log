@@ -1,0 +1,8 @@
+# ninja log v5
+3	114	7014794129401551	CMakeFiles/Mintatetel.dir/main.c.obj	3b384e27002d9abb
+11	123	7014793774493160	CMakeFiles/Mintatetel.dir/patient.c.obj	58de694809ae589e
+115	404	7014794132247848	Mintatetel.exe	31cc5cc8d2abf442
+5	307	7051565994390679	CMakeFiles/Mintatetel.dir/main.c.obj	3b384e27002d9abb
+23	313	7051565994430693	CMakeFiles/Mintatetel.dir/D_/Github_DSA/DSA/Lab5/Stack/functions.c.obj	76989f09e81b7f96
+35	329	7051565994630695	CMakeFiles/Mintatetel.dir/patient.c.obj	58de694809ae589e
+330	824	7051565999482345	Mintatetel.exe	581ffa07c3ac0959
