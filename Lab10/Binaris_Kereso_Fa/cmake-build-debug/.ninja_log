@@ -1,0 +1,7 @@
+# ninja log v5
+4	125	7054100698679278	CMakeFiles/Binaris_Kereso_Fa.dir/main.c.obj	1592e1949637b0
+4	136	7054101032718338	CMakeFiles/Binaris_Kereso_Fa.dir/binary_search_tree.c.obj	20be29e8f2e6cc2d
+137	292	7054101034203002	Binaris_Kereso_Fa.exe	c1abfdf32b673cbd
+3	152	7057936956726862	CMakeFiles/Binaris_Kereso_Fa.dir/main.c.obj	1592e1949637b0
+12	175	7057936957006879	CMakeFiles/Binaris_Kereso_Fa.dir/binary_search_tree.c.obj	20be29e8f2e6cc2d
+176	477	7057936959957141	Binaris_Kereso_Fa.exe	c1abfdf32b673cbd

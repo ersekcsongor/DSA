@@ -4,32 +4,35 @@
 
 #include "person.h"
 
-Node *createNewNode(char newData[]) {
-    Node *newItem = NULL;
-    newItem = (Node*) malloc(sizeof(Node));
-    if(!newItem){
-        printf(MEMORY_ALLOCATION_ERROR_MESSAGE);
-        exit(MEMORY_ALLOCATION_ERROR_CODE);
-    }
-    newItem->right = newItem->left = NULL;
-    strcpy(newItem->info,newData);
-    return newItem;
+node *create_node(char name[], char gender[], char birthdate[]) {
+    node *new_node = (node*) malloc(sizeof(node));
+    strcpy(new_node->name, name);
+    strcpy(new_node->gender, gender);
+    strcpy(new_node->birthdate, birthdate);
+    new_node->left = NULL;
+    new_node->right = NULL;
+    return new_node;
 }
 
-Node *insert(Node *node, char key[]){
-    if(node == NULL)
-    {
-        return createNewNode(key);
+node *insert_node(node *root, node *new_node) {
+    if (root == NULL) {
+        return new_node;
     }
-    if(strcmp(node->info,key)==1)
-    {
-        node->left = insert(node->left,key);
+    if (strcmp(new_node->name, root->name) < 0) {
+        root->left = insert_node(root->left, new_node);
+    } else {
+        root->right = insert_node(root->right, new_node);
     }
-    else if(strcmp(node->info,key)== -1)
-    {
-        node->right = insert(node->right,key);
-    }
-    return node;
-
+    return root;
 }
+
+void inorder_traversal(node *root) {
+    if (root == NULL) {
+        return;
+    }
+    inorder_traversal(root->left);
+    printf("%s (%s, %s)\n", root->name, root->gender, root->birthdate);
+    inorder_traversal(root->right);
+}
+
 

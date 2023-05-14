@@ -1,0 +1,8 @@
+# ninja log v5
+1	246	7052708382983360	build.ninja	bdd510057571728f
+9	109	7052371096003183	CMakeFiles/BinarisFa.dir/main.c.obj	e99773a3d0e069df
+3	99	7052372918006544	CMakeFiles/BinarisFa.dir/binaris_fa.c.obj	db203c001b6de4b0
+101	223	7052372919206623	BinarisFa.exe	37b2169d55f25cca
+6	201	7052708424269328	CMakeFiles/BinarisFa.dir/main.c.obj	e99773a3d0e069df
+20	231	7052708424718696	CMakeFiles/BinarisFa.dir/binaris_fa.c.obj	db203c001b6de4b0
+232	415	7052708426436447	BinarisFa.exe	37b2169d55f25cca

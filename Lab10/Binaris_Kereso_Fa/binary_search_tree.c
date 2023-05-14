@@ -31,7 +31,8 @@ Node * insert(Node *node, int key)
     return node;
 }
 
-void inorderTraversal(Node *root){
+void inorderTraversal(Node *root)
+{
     if(root == NULL)
     {
         return;
