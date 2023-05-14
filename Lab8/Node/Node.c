@@ -161,7 +161,26 @@ void freeList(Node **head){
     *head = NULL;
 }
 
+/*
 void insert(Node **head_ref,int data)
 {
-
-}
+    Node *temp = newNode(data);
+    if(isEmpty(*head_ref))
+    {
+        (*head_ref) = temp;
+        return;
+    }
+    if(data)
+    {
+        insertAtBeginning(head_ref,data);
+        return;
+    }
+    Node *node = (*head_ref)->next;
+    Node *prev;
+    while (node != NULL && temp->data < node->data)
+    {
+        prev = node;
+        node = node->next;
+    }
+    insertAfter(prev,data);
+}*/
